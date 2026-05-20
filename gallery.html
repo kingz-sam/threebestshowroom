@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Three Best Showroom</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#dddddd;
+        }
+
+       
+
+        nav{
+            width:100%;
+            background:#005ea6;
+            padding:20px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+            display:flex;
+            align-items:center;
+            gap:15px;
+            color:white;
+        }
+
+        .logo img{
+            width:55px;
+            height:55px;
+        }
+
+        .logo h1{
+            font-size:28px;
+            letter-spacing:2px;
+        }
+
+        nav ul{
+            display:flex;
+            list-style:none;
+            gap:40px;
+        }
+
+        nav ul li a{
+            text-decoration:none;
+            color:white;
+            font-size:22px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        nav ul li a:hover{
+            color:#ffcc00;
+        }
+
+        
+
+        .title{
+            width:fit-content;
+            margin:80px auto 40px;
+            background:#005ea6;
+            color:white;
+            padding:25px 70px;
+            border-radius:15px;
+        }
+
+        .title h2{
+            font-size:60px;
+        }
+
+     
+
+        .gallery-container{
+            width:90%;
+            margin:60px auto;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:40px;
+        }
+
+        .card{
+            background:#005ea6;
+            border-radius:15px;
+            overflow:hidden;
+            box-shadow:0 5px 10px rgba(0,0,0,0.3);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:scale(1.03);
+        }
+
+        .card img{
+            width:100%;
+            height:250px;
+            object-fit:cover;
+        }
+
+        .card h3{
+            color:white;
+            text-align:center;
+            padding:20px;
+            font-size:28px;
+        }
+
+    </style>
+</head>
+<body>
+
+  
+
+    <nav>
+
+        <div class="logo">
+            <img src="WhatsApp_Image_2026-05-14_at_19.27.32-removebg-preview.png" alt="Logo">
+            <h1>Three Best Showroom</h1>
+        </div>
+
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </nav>
+
+ 
+
+    <div class="title">
+        <h2>GALLERY CARS </h2>
+    </div>
+
+
+    <div class="gallery-container">
+
+        <div class="card">
+            <img src="OIP.webp" alt="">
+            <h3>BMW 1602</h3>
+        </div>
+
+        <div class="card">
+            <img src="BMW 1802.webp" alt="">
+            <h3>BMW 1802</h3>
+        </div>
+
+        <div class="card">
+            <img src="BMW 2002.webp" alt="">
+            <h3>BMW 2002</h3>
+        </div>
+
+        <div class="card">
+            <img src="BMW 3.0 CSL.webp" alt="">
+            <h3>BMW 3.0 CSL</h3>
+        </div>
+
+        <div class="card">
+            <img src="bmw-m1-procar-article-teaser.jpg.asset.1559302816814.avif" alt="">
+            <h3>BMW M1 PROCAR</h3>
+        </div>
+
+        <div class="card">
+            <img src="BMW 3 SERIES E30.webp" alt="">
+            <h3>BMW 3 SERIES E30</h3>
+        </div>
+
+        <div class="card">
+            <img src="BMW SERIE 5 (E28).webp" alt="">
+            <h3>BMW SERIE 5 E28</h3>
+        </div>
+
+        <div class="card">
+            <img src="BMW 6 SERIES E24.webp" alt="">
+            <h3>BMW 6 SERIES E24</h3>
+        </div>
+
+        <div class="card">
+            <img src="BMW-7-Series--E32.jpg" alt="">
+            <h3>BMW 7 SERIES E32</h3>
+        </div>
+
+        <div class="card">
+            <img src="BMW SERIE 3 (E36).webp" alt="">
+            <h3>BMW 3 SERIES 3 E36</h3>
+        </div>
+
+        <div class="card">
+            <img src="BMW SERIE 5 E34.jpg" alt="">
+            <h3>BMW SERIES 5 E34</h3>
+        </div>
+
+        <div class="card">
+            <img src="BMW-7-Series--E38--1226_38.jpg" alt="">
+            <h3>BMW 7 SERIES E38</h3>
+
+        
+
+    </div>
+
+</body>
+</html>
