@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About BMW</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+         }
+
+        header {
+            background: #0166B1;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            position: sticky;
+            top: 0;
+            
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo h2 {
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: gold;
+        }
+
+        .judul {
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            background:
+                linear-gradient(rgba(0, 0, 0, .5),
+                    rgba(0, 0, 0, .5)),
+                url("pendiribwm.png");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .judul h1 {
+            color: white;
+            font-size: 60px;
+            transition: .5s;
+            animation: judulAnim 2s infinite alternate;
+        }
+
+        .judul h1:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes judulAnim {
+            from {
+                color: gold;
+            }
+
+            to {
+                color: white;
+            }
+        }
+
+        .p1 {
+            display: flex;
+            gap: 30px;
+            padding: 50px;
+            align-items: center;
+        }
+
+        .caption {
+            flex: 1;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .caption h1 {
+            margin: 20px 0;
+            color: #0166B1;
+        }
+
+        .caption p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .gambar {
+            flex: 1;
+            height: 500px;
+            border-radius: 20px;
+
+            background-image: url("franz-josef-Popp_original_backup.png");
+            background-size: cover;
+            background-position: center;
+
+            transition: .5s;
+        }
+
+        .gambar:hover {
+            transform: scale(1.03);
+        }
+
+        @media(max-width:768px) {
+
+            header {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            nav {
+                margin-top: 15px;
+            }
+
+            .p1 {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .judul h1 {
+                font-size: 35px;
+            }
+
+            .gambar {
+                width: 100%;
+                height: 300px;
+            }
+        }
+
+        footer{
+        background:#0166B1;
+        color:white;
+        text-align:center;
+        padding:20px;
+    }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" width="80px" alt="Logo BMW">
+            <h2>Three Best Showroom</h2>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="judul">
+        <h1>Three Best Showroom</h1>
+    </section>
+
+    <section class="p1">
+
+        <div class="caption">
+
+            <h1>Tentang BMW</h1>
+
+            <p>
+                BMW (Bayerische Motoren Werke) adalah perusahaan otomotif Jerman yang memproduksi mobil dan sepeda
+                motor. Didirikan pada tahun 1916 oleh <b>Franz Josef Popp</b>, BMW dikenal sebagai produsen mobil mewah
+                dengan performa tinggi.
+            </p>
+
+            <h1>Sejarah Perusahaan</h1>
+
+            <p>
+                BMW memulai bisnisnya dari industri mesin pesawat terbang sebelum akhirnya beralih ke produksi sepeda
+                motor dan mobil.
+            </p>
+
+            <p>
+                Pada tahun 1990-an BMW mengakuisisi beberapa perusahaan besar termasuk Rover Group dan kemudian
+                mengembangkan merek MINI yang diluncurkan pada tahun 2001.
+            </p>
+
+        </div>
+
+        <div class="gambar"></div>
+
+    </section>
+
+    <footer>
+    © 2026 BMW Indonesia | The Ultimate Driving Experience
+    </footer>
+
+</body>
+
+</html>
