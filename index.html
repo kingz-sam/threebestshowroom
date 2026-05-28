@@ -132,6 +132,75 @@
         padding:20px;
     }
 
+    .promo-section{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin:40px 0;
+}
+
+.promo-box{
+    width:85%;
+    background:linear-gradient(135deg,#0166B1,#003b66);
+    color:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    animation: promoAnim 2s infinite alternate;
+}
+
+.promo-box h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.promo-box p{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.promo-box span{
+    color:gold;
+    font-weight:bold;
+    font-size:30px;
+}
+
+.countdown{
+    margin-bottom:25px;
+}
+
+.countdown h3{
+    font-size:35px;
+    color:gold;
+    margin-top:10px;
+}
+
+.promo-box button{
+    padding:18px 40px;
+    border:none;
+    border-radius:10px;
+    background:gold;
+    color:black;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.promo-box button:hover{
+    transform:scale(1.1);
+    background:white;
+}
+
+@keyframes promoAnim{
+    from{
+        transform:translateY(0px);
+    }
+    to{
+        transform:translateY(-5px);
+    }
+}
 </style>
 </head>
 <body>
@@ -154,6 +223,22 @@
 </section>
 
 <h2 class="populer">Most Popular Cars</h2>
+
+<section class="promo-section">
+
+    <div class="promo-box">
+        <h2>🔥 PROMO SPESIAL BMW WEEK 🔥</h2>
+        <p>Dapatkan diskon hingga <span>25%</span> untuk pembelian BMW pilihan!</p>
+
+        <div class="countdown">
+            Promo berakhir dalam:
+            <h3 id="timer">00 : 00 : 00</h3>
+        </div>
+
+        <button onclick="claimPromo()">CLAIM PROMO</button>
+    </div>
+
+</section>
 
 <div class="kotak">
 
@@ -215,6 +300,32 @@
 <footer>
     © 2026 BMW Indonesia | The Ultimate Driving Experience
 </footer>
+
+<script>
+
+    function claimPromo(){
+        alert("🎉 Selamat! Promo berhasil diklaim!");
+    } 
+    
+    
+    let time = 3600;
+    
+    setInterval(() => {
+    
+        let hours = Math.floor(time / 3600);
+        let minutes = Math.floor((time % 3600) / 60);
+        let seconds = time % 60;
+    
+        document.getElementById("timer").innerHTML =
+            `${hours} : ${minutes} : ${seconds}`;
+    
+        if(time > 0){
+            time--;
+        }
+    
+    },1000);
+    
+    </script>
 
 </body>
 </html>
