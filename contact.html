@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Three Best Showroom</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#dddddd;
+        }
+
+      
+
+        nav{
+            width:100%;
+            background:#005ea6;
+            padding:20px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+            display:flex;
+            align-items:center;
+            gap:15px;
+            color:white;
+        }
+
+        .logo img{
+            width:55px;
+            height:55px;
+        }
+
+        .logo h1{
+            font-size:28px;
+            letter-spacing:2px;
+        }
+
+        nav ul{
+            display:flex;
+            list-style:none;
+            gap:40px;
+        }
+
+        nav ul li a{
+            text-decoration:none;
+            color:white;
+            font-size:22px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        nav ul li a:hover{
+            color:#ffcc00;
+        }
+
+        
+
+        .title{
+            width:fit-content;
+            margin:80px auto 40px;
+            background:#005ea6;
+            color:white;
+            padding:25px 70px;
+            border-radius:15px;
+        }
+
+        .title h2{
+            font-size:60px;
+        }
+
+        
+
+        .contact-box{
+            width:50%;
+            margin:50px auto;
+            background:#005ea6;
+            padding:40px;
+            border-radius:20px;
+            box-shadow:0 5px 10px rgba(0,0,0,0.3);
+        }
+
+        .contact-box form{
+            display:flex;
+            flex-direction:column;
+            gap:25px;
+        }
+
+        .contact-box input,
+        .contact-box textarea{
+            padding:18px;
+            border:none;
+            border-radius:10px;
+            font-size:18px;
+            outline:none;
+        }
+
+        .contact-box textarea{
+            resize:none;
+            height:150px;
+        }
+
+        .contact-box button{
+            padding:18px;
+            border:none;
+            border-radius:10px;
+            background:red;
+            color:white;
+            font-size:22px;
+            font-weight:bold;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .contact-box button:hover{
+            background:#cc0000;
+        }
+
+        .info{
+            text-align:center;
+            margin-top:30px;
+            color:white;
+            font-size:20px;
+            line-height:40px;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+
+    <nav>
+
+        <div class="logo">
+            <img src="WhatsApp_Image_2026-05-14_at_19.27.32-removebg-preview.png" alt="Logo">
+            <h1>Three Best Showroom</h1>
+        </div>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    
+
+    <div class="title">
+        <h2>CONTACT US</h2>
+    </div>
+
+    
+
+    <div class="contact-box">
+
+        <form>
+
+            <input type="text" placeholder="ENTER YOUR NAME">
+
+            <input type="email" placeholder="ENTER YOUR EMAIL">
+
+            <textarea placeholder="ENTER YOUR MESSAGE"></textarea>
+
+            <button type="submit">SEND YOUR MESSAGGE</button>
+
+        </form>
+
+        <div class="information">
+            <p>📍 Pontianak, Indonesia</p>
+            <p>📞 0812-3456-7890</p>
+            <p>📧 threebestshowroom@gmail.com</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
