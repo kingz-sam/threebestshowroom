@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Service BMW</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #0166B1;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo h2 {
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: gold;
+        }
+
+        .judul {
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            background:
+                linear-gradient(rgba(0, 0, 0, .5),
+                    rgba(0, 0, 0, .5)),
+                url("img/service.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .judul h1 {
+            color: white;
+            font-size: 60px;
+            animation: judulAnim 2s infinite alternate;
+        }
+
+        @keyframes judulAnim {
+            from {
+                color: gold;
+            }
+
+            to {
+                color: white;
+            }
+        }
+
+        .booking {
+            display: flex;
+            gap: 30px;
+            padding: 50px;
+            align-items: center;
+        }
+
+        .service-image {
+            flex: 1;
+            height: 700px;
+            border-radius: 20px;
+            background-image: url("img/service.jpeg");
+            background-size: cover;
+            background-position: center;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+            transition: .5s;
+        }
+
+        .service-image:hover {
+            transform: scale(1.03);
+        }
+
+        .form-box {
+            flex: 1;
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+        }
+
+        .form-box h2 {
+            text-align: center;
+            color: #0166B1;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            background: #0166B1;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 10px;
+            font-size: 17px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        button:hover {
+            background: #004f8a;
+        }
+
+        .fitur {
+            display: flex;
+            gap: 25px;
+            padding: 0 50px 50px;
+        }
+
+        .card {
+            flex: 1;
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            color: #0166B1;
+        }
+
+        footer {
+            background: #0166B1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media(max-width:768px) {
+
+            header {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            nav {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .judul h1 {
+                font-size: 35px;
+            }
+
+            .booking {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .service-image {
+                width: 100%;
+                height: 350px;
+            }
+
+            .fitur {
+                flex-direction: column;
+                padding: 20px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" width="80" alt="Logo BMW">
+            <h2>Three Best Showroom</h2>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="bookingservis.html">Booking Service</a>
+        </nav>
+    </header>
+
+    <section class="judul">
+        <h1>Booking Service BMW</h1>
+    </section>
+
+    <section class="booking">
+
+        <div class="service-image"></div>
+
+        <div class="form-box">
+
+            <h2>Form Booking Service</h2>
+
+            <form>
+
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" placeholder="Masukkan nama lengkap" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Nomor Telepon</label>
+                    <input type="tel" placeholder="Masukkan nomor telepon" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Masukkan email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Model Kendaraan BMW</label>
+                    <input type="text" placeholder="Contoh: BMW X5">
+                </div>
+
+                <div class="form-group">
+                    <label>Nomor Polisi</label>
+                    <input type="text" placeholder="Contoh: KB 1234 XX">
+                </div>
+
+                <div class="form-group">
+                    <label>Tanggal Service</label>
+                    <input type="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Jenis Service</label>
+                    <select required>
+                        <option value="">-- Pilih Service --</option>
+                        <option>Service Berkala</option>
+                        <option>Ganti Oli</option>
+                        <option>Perbaikan Mesin</option>
+                        <option>Perbaikan Rem</option>
+                        <option>Pengecekan Umum</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Keluhan Kendaraan</label>
+                    <textarea rows="5"
+                        placeholder="Tuliskan keluhan atau kebutuhan service kendaraan"></textarea>
+                </div>
+
+                <button type="submit">Booking Sekarang</button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <section class="fitur">
+
+        <div class="card">
+            <h3>Teknisi Profesional</h3>
+            <p>
+                Ditangani oleh teknisi berpengalaman dan bersertifikat untuk
+                menjaga performa kendaraan BMW Anda.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Suku Cadang Asli</h3>
+            <p>
+                Menggunakan sparepart original untuk menjamin kualitas,
+                keamanan, dan kenyamanan berkendara.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Pelayanan Cepat</h3>
+            <p>
+                Sistem booking online memudahkan pelanggan mendapatkan jadwal
+                service tanpa harus menunggu lama.
+            </p>
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 BMW Indonesia | The Ultimate Driving Experience
+    </footer>
+
+</body>
+
+</html>
+

@@ -6,65 +6,49 @@
     <title>Gallery - Three Best Showroom</title>
 
     <style>
+        body {
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif; 
+    }
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, Helvetica, sans-serif;
-        }
-
-        body{
-            background:#dddddd;
-        }
-
-       
-
-        nav{
-            width:100%;
-            background:#005ea6;
-            padding:20px 40px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-        }
-
-        .logo{
-            display:flex;
-            align-items:center;
-            gap:15px;
-            color:white;
-        }
-
-        .logo img{
-            width:55px;
-            height:55px;
-        }
-
-        .logo h1{
-            font-size:28px;
-            letter-spacing:2px;
-        }
-
-        nav ul{
-            display:flex;
-            list-style:none;
-            gap:40px;
-        }
-
-        nav ul li a{
-            text-decoration:none;
-            color:white;
-            font-size:22px;
-            font-weight:bold;
-            transition:0.3s;
-        }
-
-        nav ul li a:hover{
-            color:#ffcc00;
-        }
-
+    header{
+        background: #0166B1;
+        color: white;
+        padding: 20px 40px; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+    }
         
+    nav a{
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+        font-weight: bold; 
+        gap: 10px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center; 
+        gap: 15px; 
+    }
+
+    h2{
+        letter-spacing:2px;
+    }
+
+    nav a{
+        cursor:pointer;
+        transition:0.3s;
+    }
+
+    nav a:hover{
+        color:gold;
+    }      
 
         .title{
             width:fit-content;
@@ -78,8 +62,6 @@
         .title h2{
             font-size:60px;
         }
-
-     
 
         .gallery-container{
             width:90%;
@@ -114,99 +96,496 @@
             font-size:28px;
         }
 
+                .product-container{
+            width:95%;
+            margin:50px auto;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+            gap:30px;
+        }
+
+        .product-card{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            transition:0.3s;
+        }
+
+        .product-card:hover{
+            transform:translateY(-5px);
+            box-shadow:0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .product-card img{
+            width:100%;
+            height:250px;
+            object-fit:contain;
+        }
+
+        .product-card h2{
+            margin:20px 0;
+            font-size:36px;
+            color:#222;
+        }
+
+        .price{
+            font-size:20px;
+            margin-bottom:25px;
+        }
+
+        .price span{
+            font-weight:bold;
+            font-size:22px;
+        }
+
+        .spec-list{
+            margin-bottom:25px;
+        }
+
+        .spec-list li{
+            margin-bottom:15px;
+            line-height:1.5;
+            color:#444;
+        }
+
+        .spec-list li::marker{
+            color:red;
+        }
+
+        .buy-btn{
+            width:100%;
+            padding:15px;
+            background:#e60000;
+            color:white;
+            border:none;
+            border-radius:8px;
+            font-size:18px;
+            font-weight:bold;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .buy-btn:hover{
+            background:#b30000;
+        }
+
     </style>
 </head>
 <body>
 
-  
-
-    <nav>
-
+  <header>
         <div class="logo">
-            <img src="WhatsApp_Image_2026-05-14_at_19.27.32-removebg-preview.png" alt="Logo">
-            <h1>Three Best Showroom</h1>
+            <img src="img/logo.png" alt="Gambar Logo" width="80px">
+            <h2>Three Best Showroom</h2>
         </div>
-
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-
-    </nav>
-
- 
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Shop Now</a>
+            <a href="contact.html">Contact</a>
+            <a href="bookingservis.html">Booking Service</a>
+        </nav>
+     </header> 
 
     <div class="title">
         <h2>GALLERY CARS </h2>
     </div>
 
-
     <div class="gallery-container">
 
         <div class="card">
-            <img src="bmw 1602.jpg" alt="">
+            <img src="img/bmw 1602.jpg" alt="">
             <h3>BMW 1602</h3>
+           <div class="price">
+                Starting from <span>Rp450.000.000</span>
+            </div>
+
+            <ul class="spec-list">
+                <li>Mesin 1.6L 4-Silinder 85 HP</li>
+                <li>Torsi 130 Nm</li>
+                <li>0-100 km/jam hanya 13 detik</li>
+                <li>Desain klasik kompak ikonik</li>
+                <li>Penggerak roda belakang (RWD)</li>
+            </ul>
+
+            <button class="buy-btn" onclick="beliMobil('BMW 1602')">
+                BELI SEKARANG
+            </button>
         </div>
 
         <div class="card">
-            <img src="BMW 1802.webp" alt="">
+            <img src="img/BMW 1802.webp" alt="">
             <h3>BMW 1802</h3>
+            <div class="price">
+                Starting from <span>Rp520.000.000</span>
+            </div>
+
+            <ul class="spec-list">
+                <li>Mesin 1.8L 4-Silinder 90 HP</li>
+                <li>Torsi 140 Nm</li>
+                <li>0-100 km/jam hanya 12 detik</li>
+                <li>Handling ringan & responsif</li>
+                <li>Desain klasik elegan era 70-an</li>
+            </ul>
+
+            <button class="buy-btn" onclick="beliMobil('BMW 1802')">
+                BELI SEKARANG
+            </button>
         </div>
 
         <div class="card">
-            <img src="BMW 2002.webp" alt="">
+            <img src="img/BMW 2002.webp" alt="">
             <h3>BMW 2002</h3>
+            <div class="price">
+                Starting from <span>Rp750.000.000</span>
+            </div>
+
+            <ul class="spec-list">
+                <li>Mesin 2.0L 4-Silinder 100–130 HP</li>
+                <li>Torsi 157 Nm</li>
+                <li>0-100 km/jam hanya 9,5 detik</li>
+                <li>Legenda sporty BMW klasik</li>
+                <li>DNA awal Ultimate Driving Machine</li>
+            </ul>
+
+            <button class="buy-btn" onclick="beliMobil('BMW 2002')">
+                BELI SEKARANG
+            </button>
         </div>
 
         <div class="card">
-            <img src="BMW 3.0 CSL.webp" alt="">
+            <img src="img/BMW 3.0 CSL.webp" alt="">
             <h3>BMW 3.0 CSL</h3>
+            <div class="price">
+                Starting from <span>Rp8.500.000.000</span>
+            </div>
+
+            <ul class="spec-list">
+                <li>Mesin 3.0L Inline-6 200–206 HP</li>
+                <li>Torsi 255 Nm</li>
+                <li>0-100 km/jam hanya 6,9 detik</li>
+                <li>Body ringan Coupe Sport Leichtbau</li>
+                <li>Ikon balap & aerodinamika klasik</li>
+            </ul>
+
+            <button class="buy-btn" onclick="beliMobil('BMW 3.0 CSL')">
+                BELI SEKARANG
+            </button>
         </div>
 
         <div class="card">
-            <img src="bmw-m1-procar-article-teaser.jpg.asset.1559302816814.avif" alt="">
+            <img src="img/bmw-m1-procar-article-teaser.jpg.asset.1559302816814.avif" alt="">
             <h3>BMW M1 PROCAR</h3>
+            <div class="price">
+                Starting from <span>Rp25.000.000.000</span>
+            </div>
+
+            <ul class="spec-list">
+                <li>Mesin 3.5L Inline-6 470 HP</li>
+                <li>Torsi 490 Nm</li>
+                <li>0-100 km/jam hanya 4,5 detik</li>
+                <li>Mid-engine supercar BMW pertama</li>
+                <li>Versi balap eksklusif Procar Series</li>
+            </ul>
+
+            <button class="buy-btn" onclick="beliMobil('BMW M1 PROCAR')">
+                BELI SEKARANG
+            </button>
         </div>
 
         <div class="card">
-            <img src="BMW 3 SERIES E30.webp" alt="">
+            <img src="img/BMW 3 SERIES E30.webp" alt="">
             <h3>BMW 3 SERIES E30</h3>
+            <div class="price">
+                Starting from <span>Rp380.000.000</span>
+            </div>
+
+            <ul class="spec-list">
+                <li>Mesin 1.8L–2.5L 4/6-Silinder</li>
+                <li>Tenaga hingga 170 HP</li>
+                <li>0-100 km/jam hanya 8,5 detik</li>
+                <li>Desain boxy ikonik</li>
+                <li>Handling tajam & driver-oriented</li>
+            </ul>
+
+            <button class="buy-btn" onclick="beliMobil('BMW 3 SERIES E30')">
+                BELI SEKARANG
+            </button>
         </div>
 
         <div class="card">
-            <img src="BMW SERIE 5 (E28).webp" alt="">
+            <img src="img/BMW SERIE 5 (E28).webp" alt="">
             <h3>BMW SERIE 5 E28</h3>
+            <div class="price">
+                Starting from <span>Rp420.000.000</span>
+            </div>
+
+            <ul class="spec-list">
+                <li>Mesin 1.8L–3.5L Inline Engine</li>
+                <li>Tenaga hingga 218 HP</li>
+                <li>0-100 km/jam hanya 7,5 detik</li>
+                <li>Sedan bisnis klasik premium</li>
+                <li>Kenyamanan & performa seimbang</li>
+            </ul>
+
+            <button class="buy-btn" onclick="beliMobil('BMW 5 SERIES E28')">
+                BELI SEKARANG
+            </button>
         </div>
 
         <div class="card">
-            <img src="BMW 6 SERIES E24.webp" alt="">
+            <img src="img/BMW 6 SERIES E24.webp" alt="">
             <h3>BMW 6 SERIES E24</h3>
+            <div class="price">
+                Starting from <span>Rp650.000.000</span>
+            </div>
+
+            <ul class="spec-list">
+                <li>Mesin 2.8L–3.5L Inline-6</li>
+                <li>Tenaga hingga 286 HP</li>
+                <li>0-100 km/jam hanya 6,4 detik</li>
+                <li>Coupe mewah grand tourer</li>
+                <li>Desain elegan timeless</li>
+            </ul>
+
+            <button class="buy-btn" onclick="beliMobil('BMW 6 SERIES E24')">
+                BELI SEKARANG
+            </button>
         </div>
 
         <div class="card">
-            <img src="BMW-7-Series--E32.jpg" alt="">
+            <img src="img/BMW-7-Series--E32.jpg" alt="">
             <h3>BMW 7 SERIES E32</h3>
+            <div class="price">
+                Starting from <span>Rp550.000.000</span>
+            </div>
+
+            <ul class="spec-list">
+                <li>Mesin 3.0L–5.0L V8/V12</li>
+                <li>Tenaga hingga 300 HP</li>
+                <li>0-100 km/jam hanya 7,4 detik</li>
+                <li>Sedan flagship mewah</li>
+                <li>Teknologi V12 pertama BMW</li>
+            </ul>
+
+            <button class="buy-btn" onclick="beliMobil('BMW 7 SERIES E32')">
+                BELI SEKARANG
+            </button>
         </div>
 
         <div class="card">
-            <img src="BMW SERIE 3 (E36).webp" alt="">
+            <img src="img/BMW SERIE 3 (E36).webp" alt="">
             <h3>BMW 3 SERIES 3 E36</h3>
+               <div class="price">
+                Starting from <span>Rp300.000.000</span>
+            </div>
+
+            <ul class="spec-list">
+                <li>Mesin 1.6L–3.2L</li>
+                <li>Tenaga hingga 321 HP (M3)</li>
+                <li>0-100 km/jam hanya 5,5 detik</li>
+                <li>Desain modern & aerodinamis</li>
+                <li>Handling stabil & sporty</li>
+            </ul>
+
+            <button class="buy-btn" onclick="beliMobil('BMW 3 SERIES E36')">
+                BELI SEKARANG
+            </button>
         </div>
 
         <div class="card">
-            <img src="BMW SERIE 5 E34.jpg" alt="">
+            <img src="img/BMW SERIE 5 E34.jpg" alt="">
             <h3>BMW SERIES 5 E34</h3>
+            <div class="price">
+                Starting from <span>Rp350.000.000</span>
+            </div>
+
+            <ul class="spec-list">
+                <li>Mesin 2.0L–3.8L</li>
+                <li>Tenaga hingga 340 HP (M5)</li>
+                <li>0-100 km/jam hanya 5,9 detik</li>
+                <li>Build quality solid khas BMW</li>
+                <li>Sedan premium klasik</li>
+            </ul>
+
+            <button class="buy-btn" onclick="beliMobil('BMW 5 SERIES E34')">
+                BELI SEKARANG
+            </button>
         </div>
 
         <div class="card">
-            <img src="BMW-7-Series--E38--1226_38.jpg" alt="">
+            <img src="img/BMW-7-Series--E38--1226_38.jpg" alt="">
             <h3>BMW 7 SERIES E38</h3>
+            <div class="price">
+                Starting from <span>Rp600.000.000</span>
+            </div>
+            <ul class="spec-list">
+                <li>Mesin 2.8L–5.4L V8/V12</li>
+                <li>Tenaga hingga 326 HP</li>
+                <li>0-100 km/jam hanya 6,6 detik</li>
+                <li>Luxury sedan paling ikonik 90-an</li>
+                <li>Interior mewah & elegan timeless</li>
+            </ul>
+            <button class="buy-btn" onclick="beliMobil('BMW 7 SERIES E38')">
+                BELI SEKARANG
+            </button>
+            </div>
+
+            <div class="card">
+                <img src="img/bmw f650.webp" alt="">
+               <h3>BMW F650</h3>
+                <div class="price">
+                    Starting from <span>Rp250.000.000</span>
+                </div>
+    
+                <ul class="spec-list">
+                    <li> 652 cc</li>
+                    <li>Silinder tunggal, DOHC, 4 katup</li>
+                    <li>48 – 50 hp (pada 6.500 rpm)</li>
+                    <li>53 – 57 Nm (pada 5.200 - 5.850 rpm)</li>
+                    <li>Transmisi: Manual 5 percepatan</li>
+                </ul>
+    
+                <button class="buy-btn" onclick="beliMotor('BMW F650')">
+                    BELI SEKARANG
+                </button>
+            
+            </div>
+
+            <div class="card">
+                 <img src="img/BMW K1200S.webp" alt="">
+                <h3>BMW k1200S</h3>
+                <div class="price">
+                    Starting from <span>Rp280.000.000</span>
+                </div>
+    
+                <ul class="spec-list">
+                    <li> Kapasitas: \(1.157\) cc</li>
+                    <li>Konfigurasi: 4-silinder segaris, DOHC</li>
+                    <li>Tenaga Maksimum: \(167\) tenaga kuda (\(123\) kW) pada \(10.250\) rpm</li>
+                    <li>Torsi Maksimum: \(130\) Nm pada \(8.250\) rpm atau hingga \(13.3\) kg-m</li>
+                    <li>Diameter x Langkah: \(79 \times 59\) mm</li>
+                </ul>
+    
+                <button class="buy-btn" onclick="beliMotor('BMW K1200S')">
+                    BELI SEKARANG
+                </button>
+            </div>
+
+            <div class="card">
+                 <img src="img/BMW K1200S YELLOW SPECIAL.webp" alt="">
+                <h3>BMW k1200S YELLOW SPECIAL</h3>
+                <div class="price">
+                    Starting from <span>Rp280.000.000</span>
+                </div>
+    
+                <ul class="spec-list">
+                    <li> Kapasitas: \(1.157\) cc</li>
+                    <li>Konfigurasi: 4-silinder segaris, DOHC</li>
+                    <li>Tenaga Maksimum: \(167\) tenaga kuda (\(123\) kW) pada \(10.250\) rpm</li>
+                    <li>Torsi Maksimum: \(130\) Nm pada \(8.250\) rpm atau hingga \(13.3\) kg-m</li>
+                    <li>Diameter x Langkah: \(79 \times 59\) mm</li>
+                </ul>
+    
+                <button class="buy-btn" onclick="beliMotor('BMW K1200S YELLOW SPECIAL')">
+                    BELI SEKARANG
+                </button>
+            </div>
+
+            <div class="card">
+                 <img src="img/BMW R1100GS-ABS.webp" alt="">
+                <h3>BMW R1100GS-ABS</h3>
+                <div class="price">
+                    Starting from <span>Rp295.000.000</span>
+                </div>
+    
+                <ul class="spec-list">
+                    <li>Mesin: 2-silinder, 4-stroke, Boxer</li>
+                    <li>Kapasitas: \(1.085\) cc</li>
+                    <li>Tenaga Maksimum: \(80\) hp (\(59\) kW) pada \(6.750\) rpm</li>
+                    <li>Torsi Maksimum: \(97\) Nm pada \(5.250\) rpm</li>
+                    <li>Transmisi: Manual 5-percepatan, penggerak gardan (shaft drive)</li>
+                </ul>
+    
+                <button class="buy-btn" onclick="beliMotor('BMW R1100GS-ABS')">
+                    BELI SEKARANG
+                </button>
+            </div>
+
+             <div class="card">
+                 <img src="img/BMW R1100RT.webp" alt="">
+                <h3>BMW R1100RT</h3>
+                <div class="price">
+                    Starting from <span>Rp300.000.000</span>
+                </div>
+    
+                <ul class="spec-list">
+                    <li>Tipe Mesin: 4-stroke, Boxer (Twin silinder datar)</li>
+                    <li>Kapasitas: 1085 cc</li>
+                    <li>Pendingin: Udara dan Oli</li>
+                    <li>Tenaga Maksimum: 90 hp pada putaran \(7.250\) rpm</li>
+                    <li>Berat Basah (Wet Weight): sekitar \(243\) kg hingga \(270\) kg</li>
+                </ul>
+    
+                <button class="buy-btn" onclick="beliMotor('BMW R1100RT')">
+                    BELI SEKARANG
+                </button>
+            </div>
+             
+                  <div class="card">
+                  <img src="img/BMW R1200GS.webp" alt="">
+                <h3>BMW R1200GS</h3>
+                <div class="price">
+                    Starting from <span>Rp300.000.000</span>
+                </div>
+    
+                <ul class="spec-list">
+                    <li>Tipe Mesin: 4-stroke, Boxer (Twin silinder datar)</li>
+                    <li>Kapasitas: 1085 cc</li>
+                    <li>Pendingin: Udara dan Oli</li>
+                    <li>Tenaga Maksimum: 90 hp pada putaran \(7.250\) rpm</li>
+                    <li>Berat Basah (Wet Weight): sekitar \(243\) kg hingga \(270\) kg</li>
+                </ul>
+    
+                <button class="buy-btn" onclick="beliMotor('BMW R1100GS-ABS')">
+                    BELI SEKARANG
+                </button>
+            </div>
+
+           
+                  <div class="card">
+                   <img src="img/BMW R1200GS SPECIAL RED.webp" alt="">
+                <h3>BMW R1200GS SPECIAL RED</h3>
+                <div class="price">
+                    Starting from <span>Rp600.000.000</span>
+                </div>
+    
+                <ul class="spec-list">
+                    <li>Mesin: 1.170cc, 2-silinder Boxer, berpendingin cairan/udara</li>
+                    <li>Tenaga: 125 PS @ 7.750 rpm</li>
+                    <li>Torsi: 125 Nm @ 6.500 rpm</li>
+                    <li>Transmisi: 6-percepatan manual</li>
+                    <li>Suspensi: Depan BMW Telelever, Belakang BMW Paralever</li>
+                </ul>
+    
+                <button class="buy-btn" onclick="beliMotor('BMW R1200GS SPECIAL RED')">
+                    BELI SEKARANG
+                </button>
+            </div>
+    
+
+            
+
+            
 
         
 
-    </div>
+        <script>
+          function beliMobil(mobil){
+            alert("Anda memilih " + mobil + ". Tim showroom akan segera menghubungi Anda.");
+        }
+        </script>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <style>
     body {
         background-color: #f2f2f2;
@@ -201,20 +201,46 @@
         transform:translateY(-5px);
     }
 }
+
+.harga{
+    color: gold;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.btn-beli{
+    display:inline-block;
+    margin-top:10px;
+    padding:12px 25px;
+    background:gold;
+    color:black;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn-beli:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
 </style>
 </head>
 <body>
      <header>
         <div class="logo">
-            <img src="logo.png" alt="Gambar Logo" width="80px">
+            <img src="img/logo.png" alt="Gambar Logo" width="80px">
             <h2>Three Best Showroom</h2>
         </div>
         
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="gallery.html">Gallery</a>
+            <a href="gallery.html">Shop Now</a>
             <a href="contact.html">Contact</a>
+            <a href="bookingservis.html">Booking Service</a>
         </nav>
      </header>
 
@@ -243,7 +269,7 @@
 <div class="kotak">
 
     <div class="kotak1">
-        <img src="G82.jpeg">
+        <img src="img/G82.jpeg">
         <div class="kotak-kecil">
             <h3>BMW M4 Competition (G82)</h3>
             <p> SPESIFIKASI: <br>
@@ -257,11 +283,15 @@
                 Fitur unggulan: Kidney grille khas, BMW M tuning, curved display 12.3"+14.9",
                 driving modes customizable, lightweight carbon roof.
             </p>
+            <div class="harga">Rp 2.860.000.000</div>
+            <a href="#" class="btn-beli" onclick="beliMobil('BMW M4 Competition (G82)')">
+                Beli Sekarang
+            </a>
         </div>
     </div>
 
     <div class="kotak1">
-        <img src="G30.jpeg">
+        <img src="img/G30.jpeg">
         <div class="kotak-kecil">
             <h3>BMW 530i M Sport (G30 LCI)</h3>
             <p> SPESIFIKASI: <br>
@@ -275,11 +305,15 @@
                 Fitur unggulan: Kidney grille krom + M bodykit,
                 BMW Live Cockpit Professional, Harman Kardon sound system, Driving Assistant Professional.
             </p>
+            <div class="harga">Rp 1.850.000.000</div>
+            <a href="#" class="btn-beli" onclick="beliMobil('BMW 530i M Sport (G30 LCI)')">
+                Beli Sekarang
+            </a>
         </div>
     </div>
 
      <div class="kotak1">
-        <img src="gran coupe.jpg">
+        <img src="img/gran coupe.jpg">
         <div class="kotak-kecil">
             <h3>BMW i4 eDrive40 (Gran Coupe Listrik)</h3>
             <p> SPESIFIKASI: <br>
@@ -293,6 +327,10 @@
                 Fitur unggulan: BMW Operating System 8,
                 kidney grille tertutup khas BMW i, silent driving, fast charging 10–80% dalam 31 menit. <br>
             </p>
+            <div class="harga">Rp 1.950.000.000</div>
+            <a href="#" class="btn-beli" onclick="beliMobil('BMW i4 eDrive40 (Gran Coupe Listrik)')">
+                Beli Sekarang
+            </a>
         </div>
     </div>
 </div>
@@ -324,6 +362,10 @@
         }
     
     },1000);
+
+    function beliMobil(namaMobil){
+    alert("Terima kasih telah memilih " + namaMobil + ". Tim sales kami akan segera menghubungi Anda.");
+}
     
     </script>
 
