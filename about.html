@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About BMW</title>
     <style>
-
         body {
             font-family: Arial, sans-serif;
             background: #f4f4f4;
             line-height: 1.7;
             margin: 0;
-            padding: 0;
-         }
+            padding: 0
+        }
 
         header {
             background: #0166B1;
@@ -21,36 +20,35 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: white;
+            color: #fff;
             position: sticky;
-            top: 0;
-            
+            top: 0
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 15px
         }
 
         .logo h2 {
-            letter-spacing: 2px;
+            letter-spacing: 2px
         }
 
         nav {
             display: flex;
-            gap: 25px;
+            gap: 25px
         }
 
         nav a {
             text-decoration: none;
-            color: white;
-            font-weight: bold;
-            transition: .3s;
+            color: #fff;
+            font-weight: 700;
+            transition: .3s
         }
 
         nav a:hover {
-            color: gold;
+            color: gold
         }
 
         .judul {
@@ -59,34 +57,29 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-
-            background:
-                linear-gradient(rgba(0, 0, 0, .5),
-                    rgba(0, 0, 0, .5)),
-                url("img/Franz-Josef-Popp_original_backup.png");
-
+            background: linear-gradient(rgb(0 0 0 / .5), rgb(0 0 0 / .5)), url(img/Franz-Josef-Popp_original_backup.png);
             background-size: cover;
-            background-position: center;
+            background-position: center
         }
 
         .judul h1 {
-            color: white;
+            color: #fff;
             font-size: 60px;
             transition: .5s;
-            animation: judulAnim 2s infinite alternate;
+            animation: judulAnim 2s infinite alternate
         }
 
         .judul h1:hover {
-            transform: scale(1.1);
+            transform: scale(1.1)
         }
 
         @keyframes judulAnim {
             from {
-                color: gold;
+                color: gold
             }
 
             to {
-                color: white;
+                color: #fff
             }
         }
 
@@ -94,76 +87,72 @@
             display: flex;
             gap: 30px;
             padding: 50px;
-            align-items: center;
+            align-items: center
         }
 
         .caption {
             flex: 1;
-            background: white;
+            background: #fff;
             padding: 30px;
             border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgb(0 0 0 / .2)
         }
 
         .caption h1 {
             margin: 20px 0;
-            color: #0166B1;
+            color: #0166B1
         }
 
         .caption p {
             margin-bottom: 20px;
-            text-align: justify;
+            text-align: justify
         }
 
         .gambar {
             flex: 1;
             height: 500px;
             border-radius: 20px;
-
-            background-image: url("img/Franz-Josef-Popp_original_backup.png");
+            background-image: url(img/Franz-Josef-Popp_original_backup.png);
             background-size: cover;
             background-position: center;
-
-            transition: .5s;
+            transition: .5s
         }
 
         .gambar:hover {
-            transform: scale(1.03);
+            transform: scale(1.03)
         }
 
         @media(max-width:768px) {
-
             header {
                 flex-direction: column;
-                padding: 20px;
+                padding: 20px
             }
 
             nav {
-                margin-top: 15px;
+                margin-top: 15px
             }
 
             .p1 {
                 flex-direction: column;
-                padding: 20px;
+                padding: 20px
             }
 
             .judul h1 {
-                font-size: 35px;
+                font-size: 35px
             }
 
             .gambar {
                 width: 100%;
-                height: 300px;
+                height: 300px
             }
         }
 
-        footer{
-        background:#0166B1;
-        color:white;
-        text-align:center;
-        padding:20px;
-    }
-
+        footer {
+            background: #0166B1;
+            color: #fff;
+            text-align: center;
+            padding: 20px
+        }
     </style>
 
 </head>
@@ -220,7 +209,7 @@
     </section>
 
     <footer>
-    © 2026 BMW Indonesia | The Ultimate Driving Experience
+        © 2026 BMW Indonesia | The Ultimate Driving Experience
     </footer>
 
 </body>
