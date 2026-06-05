@@ -64,108 +64,84 @@
             font-size: 60px
         }
 
-        .gallery-container {
-            width: 90%;
-            margin: 60px auto;
+        .kotak {
+            width: 85%;
+            margin: auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px
         }
 
-        .card {
-            background: #005ea6;
+        .kotak1 {
+            background: #0166B1;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 10px rgb(0 0 0 / .3);
+            box-shadow: 0 5px 15px rgb(0 0 0 / .1);
+            transition: 0.4s
+        }
+
+        .kotak1:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgb(0 0 0 / .2)
+        }
+
+        .kotak1 img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: 0.4s
+        }
+
+        .kotak1:hover img {
+            transform: scale(1.1)
+        }
+
+        .kotak-kecil {
+            padding: 20px
+        }
+
+        .kotak-kecil h3 {
+            margin-bottom: 10px;
+            color: #fff
+        }
+
+        .kotak-kecil p {
+            font-size: 14px;
+            color: #fff
+        }
+
+        .harga {
+            color: gold;
+            font-size: 22px;
+            font-weight: 700;
+            margin: 15px 0
+        }
+
+        .btn-beli {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 25px;
+            background: gold;
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
             transition: 0.3s
         }
 
-        .card:hover {
-            transform: scale(1.03)
+        .btn-beli:hover {
+            background: #fff;
+            transform: scale(1.05)
         }
 
-        .card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover
-        }
-
-        .card h3 {
+        footer {
+            background: #0166B1;
             color: #fff;
             text-align: center;
-            padding: 20px;
-            font-size: 28px
+            padding: 20px
         }
 
-        .product-container {
-            width: 95%;
-            margin: 50px auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px
-        }
-
-        .product-card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            transition: 0.3s
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgb(0 0 0 / .15)
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: contain
-        }
-
-        .product-card h2 {
-            margin: 20px 0;
-            font-size: 36px;
-            color: #222
-        }
-
-        .price {
-            font-size: 20px;
-            margin-bottom: 25px;
-            color: #ff0
-        }
-
-        .price span {
-            font-weight: 700;
-            font-size: 22px
-        }
-
-        .spec-list {
-            margin-bottom: 25px
-        }
-
-        .spec-list li {
-            margin-bottom: 15px;
-            line-height: 1.5;
-            color: whitesmoke
-        }
-
-        .buy-btn {
-            width: 100%;
-            padding: 15px;
-            background: #e60000;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: 0.3s
-        }
-
-        .buy-btn:hover {
-            background: #b30000
-        }
     </style>
 </head>
 
@@ -190,386 +166,472 @@
         <h2>GALLERY CARS </h2>
     </div>
 
-    <div class="gallery-container">
+    <div class="kotak">
 
-        <div class="card">
+        <div class="kotak1">
+            <img src="img/G82.jpeg">
+            <div class="kotak-kecil">
+                <h3>BMW M4 Competition (G82)</h3>
+                <p> SPESIFIKASI: <br>
+                    Mesin: 3.0L 6-silinder segaris TwinPower Turbo <br>
+                    Tenaga: 510 hp <br>
+                    Torsi: 650 Nm <br>
+                    Transmisi: 8-speed M Steptronic otomatis <br>
+                    Penggerak: Rear-wheel drive / M xDrive (AWD) <br>
+                    Akselerasi: 0–100 km/jam dalam 3,8 detik <br>
+                    Dudukan: 4 kursi, 2 pintu <br>
+                    Fitur unggulan: Kidney grille khas, BMW M tuning, curved display 12.3"+14.9",
+                    driving modes customizable, lightweight carbon roof.
+                </p>
+                <div class="harga">Rp 2.860.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMobil('BMW M4 Competition (G82)')">
+                    Beli Sekarang
+                </a>
+            </div>
+        </div>
+
+        <div class="kotak1">
+            <img src="img/G30.jpeg">
+            <div class="kotak-kecil">
+                <h3>BMW 530i M Sport (G30 LCI)</h3>
+                <p> SPESIFIKASI: <br>
+                    Mesin: 2.0L 4-silinder TwinPower Turbo <br>
+                    Tenaga: 252 hp <br>
+                    Torsi: 350 Nm <br>
+                    Transmisi: 8-speed Steptronic otomatis <br>
+                    Penggerak: Rear-wheel drive <br>
+                    Akselerasi: 0–100 km/jam dalam 6,2 detik <br>
+                    Dudukan: 5 kursi, 4 pintu <br>
+                    Fitur unggulan: Kidney grille krom + M bodykit,
+                    BMW Live Cockpit Professional, Harman Kardon sound system, Driving Assistant Professional.
+                </p>
+                <div class="harga">Rp 1.850.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMobil('BMW 530i M Sport (G30 LCI)')">
+                    Beli Sekarang
+                </a>
+            </div>
+        </div>
+
+        <div class="kotak1">
+            <img src="img/gran coupe.jpg">
+            <div class="kotak-kecil">
+                <h3>BMW i4 eDrive40 (Gran Coupe Listrik)</h3>
+                <p> SPESIFIKASI: <br>
+                    Motor: 1 unit motor listrik di belakang <br>
+                    Tenaga: 340 hp <br>
+                    Torsi: 430 Nm <br>
+                    Baterai: 81,5 kWh lithium-ion <br>
+                    Jarak tempuh: Hingga 590 km (WLTP) <br>
+                    Akselerasi: 0–100 km/jam dalam 5,7 detik <br>
+                    Dudukan: 5 kursi, 4 pintu (Gran Coupe) <br>
+                    Fitur unggulan: BMW Operating System 8,
+                    kidney grille tertutup khas BMW i, silent driving, fast charging 10–80% dalam 31 menit. <br>
+                </p>
+                <div class="harga">Rp 1.950.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMobil('BMW i4 eDrive40 (Gran Coupe Listrik)')">
+                    BELI SEKARANG
+                </a>
+            </div>
+        </div>
+
+        <div class="kotak1">
             <img src="img/bmw 1602.jpg" alt="">
-            <h3>BMW 1602</h3>
-            <div class="price">
-                Starting from <span>Rp450.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW 1602</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 1.6L 4-silinder bensin <br>
+                    Tenaga: 85 hp <br>
+                    Torsi: 130 Nm <br>
+                    Transmisi: Manual 4-percepatan <br>
+                    Penggerak: Rear-wheel drive (RWD) <br>
+                    Akselerasi: 0–100 km/jam dalam 13 detik <br>
+                    Dudukan: 5 kursi, 2 pintu <br>
+                    Fitur unggulan: Desain klasik kompak ikonik BMW Neue Klasse, handling ringan dan stabil, konsumsi
+                    bahan bakar efisien, cocok untuk kolektor mobil klasik.
+                </p>
+                <div class="harga">Rp450.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMobil('BMW 1602')">
+                    BELI SEKARANG
+                </a>
             </div>
-
-            <ul class="spec-list">
-                <li>Mesin 1.6L 4-Silinder 85 HP</li>
-                <li>Torsi 130 Nm</li>
-                <li>0-100 km/jam hanya 13 detik</li>
-                <li>Desain klasik kompak ikonik</li>
-                <li>Penggerak roda belakang (RWD)</li>
-            </ul>
-
-            <button class="buy-btn" onclick="beliMobil('BMW 1602')">
-                BELI SEKARANG
-            </button>
         </div>
 
-        <div class="card">
+        <div class="kotak1">
             <img src="img/BMW 1802.webp" alt="">
-            <h3>BMW 1802</h3>
-            <div class="price">
-                Starting from <span>Rp520.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW 1802</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 1.8L 4-silinder bensin <br>
+                    Tenaga: 90 hp <br>
+                    Torsi: 140 Nm <br>
+                    Transmisi: Manual 4-percepatan <br>
+                    Penggerak: Rear-wheel drive (RWD) <br>
+                    Akselerasi: 0–100 km/jam dalam 12 detik <br>
+                    Dudukan: 5 kursi, 2 pintu <br>
+                    Fitur unggulan: Desain klasik BMW Neue Klasse, handling ringan dan responsif, konsumsi bahan bakar
+                    efisien, cocok untuk kolektor mobil klasik.
+                </p>
+                <div class="harga">Rp520.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMobil('BMW 1802')">
+                    BELI SEKARANG
+                </a>
             </div>
-
-            <ul class="spec-list">
-                <li>Mesin 1.8L 4-Silinder 90 HP</li>
-                <li>Torsi 140 Nm</li>
-                <li>0-100 km/jam hanya 12 detik</li>
-                <li>Handling ringan & responsif</li>
-                <li>Desain klasik elegan era 70-an</li>
-            </ul>
-
-            <button class="buy-btn" onclick="beliMobil('BMW 1802')">
-                BELI SEKARANG
-            </button>
         </div>
 
-        <div class="card">
+        <div class="kotak1">
             <img src="img/BMW 2002.webp" alt="">
-            <h3>BMW 2002</h3>
-            <div class="price">
-                Starting from <span>Rp750.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW 2002</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 2.0L 4-silinder bensin <br>
+                    Tenaga: 130 hp <br>
+                    Torsi: 157 Nm <br>
+                    Transmisi: Manual 4-percepatan <br>
+                    Penggerak: Rear-wheel drive (RWD) <br>
+                    Akselerasi: 0–100 km/jam dalam 9,5 detik <br>
+                    Dudukan: 5 kursi, 2 pintu <br>
+                    Fitur unggulan: Legenda sporty BMW klasik, performa tinggi di masanya, handling presisi, cikal bakal
+                    Ultimate Driving Machine.
+                </p>
+                <div class="harga">Rp750.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMobil('BMW 2002')">BELI SEKARANG</a>
             </div>
-
-            <ul class="spec-list">
-                <li>Mesin 2.0L 4-Silinder 100–130 HP</li>
-                <li>Torsi 157 Nm</li>
-                <li>0-100 km/jam hanya 9,5 detik</li>
-                <li>Legenda sporty BMW klasik</li>
-                <li>DNA awal Ultimate Driving Machine</li>
-            </ul>
-
-            <button class="buy-btn" onclick="beliMobil('BMW 2002')">
-                BELI SEKARANG
-            </button>
         </div>
 
-        <div class="card">
+        <div class="kotak1">
             <img src="img/BMW 3.0 CSL.webp" alt="">
-            <h3>BMW 3.0 CSL</h3>
-            <div class="price">
-                Starting from <span>Rp8.500.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW 3.0 CSL</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 3.0L Inline-6 naturally aspirated <br>
+                    Tenaga: 206 hp <br>
+                    Torsi: 255 Nm <br>
+                    Transmisi: Manual 5-percepatan <br>
+                    Penggerak: Rear-wheel drive (RWD) <br>
+                    Akselerasi: 0–100 km/jam dalam 6,9 detik <br>
+                    Dudukan: 4 kursi, 2 pintu <br>
+                    Fitur unggulan: Body ringan Coupe Sport Leichtbau, aerodinamika ikonik "Batmobile", sejarah balap
+                    BMW yang legendaris.
+                </p>
+                <div class="harga">Rp8.500.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMobil('BMW 3.0 CSL')">BELI SEKARANG</a>
             </div>
-
-            <ul class="spec-list">
-                <li>Mesin 3.0L Inline-6 200–206 HP</li>
-                <li>Torsi 255 Nm</li>
-                <li>0-100 km/jam hanya 6,9 detik</li>
-                <li>Body ringan Coupe Sport Leichtbau</li>
-                <li>Ikon balap & aerodinamika klasik</li>
-            </ul>
-
-            <button class="buy-btn" onclick="beliMobil('BMW 3.0 CSL')">
-                BELI SEKARANG
-            </button>
         </div>
 
-        <div class="card">
+        <div class="kotak1">
             <img src="img/bmw-m1-procar-article-teaser.jpg.asset.1559302816814.avif" alt="">
-            <h3>BMW M1 PROCAR</h3>
-            <div class="price">
-                Starting from <span>Rp25.000.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW M1 PROCAR</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 3.5L Inline-6 M88/1 <br>
+                    Tenaga: 470 hp <br>
+                    Torsi: 490 Nm <br>
+                    Transmisi: Manual 5-percepatan ZF <br>
+                    Penggerak: Rear-wheel drive (RWD) <br>
+                    Akselerasi: 0–100 km/jam dalam 4,5 detik <br>
+                    Dudukan: 2 kursi, 2 pintu <br>
+                    Fitur unggulan: Supercar pertama BMW bermesin tengah, versi balap Procar Series, bodi ringan dan
+                    sangat langka.
+                </p>
+                <div class="harga">Rp25.000.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMobil('BMW M1 PROCAR')">BELI SEKARANG</a>
             </div>
-
-            <ul class="spec-list">
-                <li>Mesin 3.5L Inline-6 470 HP</li>
-                <li>Torsi 490 Nm</li>
-                <li>0-100 km/jam hanya 4,5 detik</li>
-                <li>Mid-engine supercar BMW pertama</li>
-                <li>Versi balap eksklusif Procar Series</li>
-            </ul>
-
-            <button class="buy-btn" onclick="beliMobil('BMW M1 PROCAR')">
-                BELI SEKARANG
-            </button>
         </div>
 
-        <div class="card">
+        <div class="kotak1">
             <img src="img/BMW 3 SERIES E30.webp" alt="">
-            <h3>BMW 3 SERIES E30</h3>
-            <div class="price">
-                Starting from <span>Rp380.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW 3 SERIES E30</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 2.5L Inline-6 <br>
+                    Tenaga: 170 hp <br>
+                    Torsi: 222 Nm <br>
+                    Transmisi: Manual 5-percepatan <br>
+                    Penggerak: Rear-wheel drive (RWD) <br>
+                    Akselerasi: 0–100 km/jam dalam 8,5 detik <br>
+                    Dudukan: 5 kursi, 4 pintu <br>
+                    Fitur unggulan: Desain boxy ikonik, handling tajam, salah satu BMW klasik paling dicari kolektor.
+                </p>
+                <div class="harga">Rp380.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMobil('BMW 3 SERIES E30')">BELI SEKARANG</a>
             </div>
-
-            <ul class="spec-list">
-                <li>Mesin 1.8L–2.5L 4/6-Silinder</li>
-                <li>Tenaga hingga 170 HP</li>
-                <li>0-100 km/jam hanya 8,5 detik</li>
-                <li>Desain boxy ikonik</li>
-                <li>Handling tajam & driver-oriented</li>
-            </ul>
-
-            <button class="buy-btn" onclick="beliMobil('BMW 3 SERIES E30')">
-                BELI SEKARANG
-            </button>
         </div>
 
-        <div class="card">
+        <div class="kotak1">
             <img src="img/BMW SERIE 5 (E28).webp" alt="">
-            <h3>BMW SERIE 5 E28</h3>
-            <div class="price">
-                Starting from <span>Rp420.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW 5 SERIES E28</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 3.5L Inline-6 <br>
+                    Tenaga: 218 hp <br>
+                    Torsi: 310 Nm <br>
+                    Transmisi: Manual 5-percepatan <br>
+                    Penggerak: Rear-wheel drive (RWD) <br>
+                    Akselerasi: 0–100 km/jam dalam 7,5 detik <br>
+                    Dudukan: 5 kursi, 4 pintu <br>
+                    Fitur unggulan: Sedan bisnis premium klasik, kenyamanan tinggi, performa seimbang dan elegan.
+                </p>
+                <div class="harga">Rp420.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMobil('BMW 5 SERIES E28')">BELI SEKARANG</a>
             </div>
-
-            <ul class="spec-list">
-                <li>Mesin 1.8L–3.5L Inline Engine</li>
-                <li>Tenaga hingga 218 HP</li>
-                <li>0-100 km/jam hanya 7,5 detik</li>
-                <li>Sedan bisnis klasik premium</li>
-                <li>Kenyamanan & performa seimbang</li>
-            </ul>
-
-            <button class="buy-btn" onclick="beliMobil('BMW 5 SERIES E28')">
-                BELI SEKARANG
-            </button>
         </div>
 
-        <div class="card">
+        <div class="kotak1">
             <img src="img/BMW 6 SERIES E24.webp" alt="">
-            <h3>BMW 6 SERIES E24</h3>
-            <div class="price">
-                Starting from <span>Rp650.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW 6 SERIES E24</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 3.5L Inline-6 <br>
+                    Tenaga: 286 hp <br>
+                    Torsi: 340 Nm <br>
+                    Transmisi: Manual 5-percepatan <br>
+                    Penggerak: Rear-wheel drive (RWD) <br>
+                    Akselerasi: 0–100 km/jam dalam 6,4 detik <br>
+                    Dudukan: 4 kursi, 2 pintu <br>
+                    Fitur unggulan: Grand Tourer mewah, desain shark nose ikonik, kenyamanan dan performa kelas atas.
+                </p>
+                <div class="harga">Rp650.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMobil('BMW 6 SERIES E24')">BELI SEKARANG</a>
             </div>
-
-            <ul class="spec-list">
-                <li>Mesin 2.8L–3.5L Inline-6</li>
-                <li>Tenaga hingga 286 HP</li>
-                <li>0-100 km/jam hanya 6,4 detik</li>
-                <li>Coupe mewah grand tourer</li>
-                <li>Desain elegan timeless</li>
-            </ul>
-
-            <button class="buy-btn" onclick="beliMobil('BMW 6 SERIES E24')">
-                BELI SEKARANG
-            </button>
         </div>
 
-        <div class="card">
+        <div class="kotak1">
             <img src="img/BMW-7-Series--E32.jpg" alt="">
-            <h3>BMW 7 SERIES E32</h3>
-            <div class="price">
-                Starting from <span>Rp550.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW 7 SERIES E32</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 5.0L V12 <br>
+                    Tenaga: 300 hp <br>
+                    Torsi: 450 Nm <br>
+                    Transmisi: Otomatis 4-percepatan <br>
+                    Penggerak: Rear-wheel drive (RWD) <br>
+                    Akselerasi: 0–100 km/jam dalam 7,4 detik <br>
+                    Dudukan: 5 kursi, 4 pintu <br>
+                    Fitur unggulan: Sedan flagship BMW pertama bermesin V12, kabin mewah, teknologi premium pada
+                    masanya.
+                </p>
+                <div class="harga">Rp550.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMobil('BMW 7 SERIES E32')">BELI SEKARANG</a>
             </div>
-
-            <ul class="spec-list">
-                <li>Mesin 3.0L–5.0L V8/V12</li>
-                <li>Tenaga hingga 300 HP</li>
-                <li>0-100 km/jam hanya 7,4 detik</li>
-                <li>Sedan flagship mewah</li>
-                <li>Teknologi V12 pertama BMW</li>
-            </ul>
-
-            <button class="buy-btn" onclick="beliMobil('BMW 7 SERIES E32')">
-                BELI SEKARANG
-            </button>
         </div>
 
-        <div class="card">
+        <div class="kotak1">
             <img src="img/BMW SERIE 3 (E36).webp" alt="">
-            <h3>BMW 3 SERIES 3 E36</h3>
-            <div class="price">
-                Starting from <span>Rp300.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW 3 SERIES E36</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 3.2L Inline-6 (M3) <br>
+                    Tenaga: 321 hp <br>
+                    Torsi: 350 Nm <br>
+                    Transmisi: Manual 6-percepatan <br>
+                    Penggerak: Rear-wheel drive (RWD) <br>
+                    Akselerasi: 0–100 km/jam dalam 5,5 detik <br>
+                    Dudukan: 5 kursi, 4 pintu <br>
+                    Fitur unggulan: Desain modern, handling stabil, salah satu generasi BMW paling populer sepanjang
+                    masa.
+                </p>
+                <div class="harga">Rp300.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMobil('BMW 3 SERIES E36')">BELI SEKARANG</a>
             </div>
-
-            <ul class="spec-list">
-                <li>Mesin 1.6L–3.2L</li>
-                <li>Tenaga hingga 321 HP (M3)</li>
-                <li>0-100 km/jam hanya 5,5 detik</li>
-                <li>Desain modern & aerodinamis</li>
-                <li>Handling stabil & sporty</li>
-            </ul>
-
-            <button class="buy-btn" onclick="beliMobil('BMW 3 SERIES E36')">
-                BELI SEKARANG
-            </button>
         </div>
 
-        <div class="card">
+        <div class="kotak1">
             <img src="img/BMW SERIE 5 E34.jpg" alt="">
-            <h3>BMW SERIES 5 E34</h3>
-            <div class="price">
-                Starting from <span>Rp350.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW 5 SERIES E34</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 3.8L Inline-6 (M5) <br>
+                    Tenaga: 340 hp <br>
+                    Torsi: 400 Nm <br>
+                    Transmisi: Manual 6-percepatan <br>
+                    Penggerak: Rear-wheel drive (RWD) <br>
+                    Akselerasi: 0–100 km/jam dalam 5,9 detik <br>
+                    Dudukan: 5 kursi, 4 pintu <br>
+                    Fitur unggulan: Build quality solid khas BMW, kenyamanan premium, handling presisi, salah satu sedan
+                    sport terbaik era 90-an.
+                </p>
+                <div class="harga">Rp350.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMobil('BMW 5 SERIES E34')">BELI SEKARANG</a>
             </div>
-
-            <ul class="spec-list">
-                <li>Mesin 2.0L–3.8L</li>
-                <li>Tenaga hingga 340 HP (M5)</li>
-                <li>0-100 km/jam hanya 5,9 detik</li>
-                <li>Build quality solid khas BMW</li>
-                <li>Sedan premium klasik</li>
-            </ul>
-
-            <button class="buy-btn" onclick="beliMobil('BMW 5 SERIES E34')">
-                BELI SEKARANG
-            </button>
         </div>
 
-        <div class="card">
+        <div class="kotak1">
             <img src="img/BMW-7-Series--E38--1226_38.jpg" alt="">
-            <h3>BMW 7 SERIES E38</h3>
-            <div class="price">
-                Starting from <span>Rp600.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW 7 SERIES E38</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 5.4L V12 <br>
+                    Tenaga: 326 hp <br>
+                    Torsi: 490 Nm <br>
+                    Transmisi: Otomatis 5-percepatan <br>
+                    Penggerak: Rear-wheel drive (RWD) <br>
+                    Akselerasi: 0–100 km/jam dalam 6,6 detik <br>
+                    Dudukan: 5 kursi, 4 pintu <br>
+                    Fitur unggulan: Luxury sedan paling ikonik era 90-an, interior mewah, suspensi nyaman, pernah
+                    digunakan dalam film James Bond.
+                </p>
+                <div class="harga">Rp600.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMobil('BMW 7 SERIES E38')">BELI SEKARANG</a>
             </div>
-            <ul class="spec-list">
-                <li>Mesin 2.8L–5.4L V8/V12</li>
-                <li>Tenaga hingga 326 HP</li>
-                <li>0-100 km/jam hanya 6,6 detik</li>
-                <li>Luxury sedan paling ikonik 90-an</li>
-                <li>Interior mewah & elegan timeless</li>
-            </ul>
-            <button class="buy-btn" onclick="beliMobil('BMW 7 SERIES E38')">
-                BELI SEKARANG
-            </button>
         </div>
 
-        <div class="card">
+        <div class="kotak1">
             <img src="img/bmw f650.webp" alt="">
-            <h3>BMW F650</h3>
-            <div class="price">
-                Starting from <span>Rp250.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW F650</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 652 cc Single Cylinder DOHC <br>
+                    Tenaga: 50 hp <br>
+                    Torsi: 57 Nm <br>
+                    Transmisi: Manual 5-percepatan <br>
+                    Penggerak: Chain Drive <br>
+                    Akselerasi: 0–100 km/jam dalam 5,7 detik <br>
+                    Dudukan: 2 orang <br>
+                    Fitur unggulan: Adventure touring ringan, konsumsi bahan bakar irit, posisi berkendara nyaman, cocok
+                    untuk perjalanan jauh.
+                </p>
+                <div class="harga">Rp250.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMotor('BMW F650')">BELI SEKARANG</a>
             </div>
-
-            <ul class="spec-list">
-                <li> 652 cc</li>
-                <li>Silinder tunggal, DOHC, 4 katup</li>
-                <li>48 – 50 hp (pada 6.500 rpm)</li>
-                <li>53 – 57 Nm (pada 5.200 - 5.850 rpm)</li>
-                <li>Transmisi: Manual 5 percepatan</li>
-            </ul>
-
-            <button class="buy-btn" onclick="beliMotor('BMW F650')">
-                BELI SEKARANG
-            </button>
-
         </div>
 
-        <div class="card">
+        <div class="kotak1">
             <img src="img/BMW K1200S.webp" alt="">
-            <h3>BMW k1200S</h3>
-            <div class="price">
-                Starting from <span>Rp280.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW K1200S</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 1.157 cc Inline-4 DOHC <br>
+                    Tenaga: 167 hp <br>
+                    Torsi: 130 Nm <br>
+                    Transmisi: Manual 6-percepatan <br>
+                    Penggerak: Shaft Drive <br>
+                    Akselerasi: 0–100 km/jam dalam 2,8 detik <br>
+                    Dudukan: 2 orang <br>
+                    Fitur unggulan: Sport touring berperforma tinggi, ESA Suspension, ABS BMW Motorrad, kecepatan
+                    maksimum lebih dari 280 km/jam.
+                </p>
+                <div class="harga">Rp280.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMotor('BMW K1200S')">BELI SEKARANG</a>
             </div>
-
-            <ul class="spec-list">
-                <li> Kapasitas: \(1.157\) cc</li>
-                <li>Konfigurasi: 4-silinder segaris, DOHC</li>
-                <li>Tenaga Maksimum: \(167\) tenaga kuda (\(123\) kW) pada \(10.250\) rpm</li>
-                <li>Torsi Maksimum: \(130\) Nm pada \(8.250\) rpm atau hingga \(13.3\) kg-m</li>
-                <li>Diameter x Langkah: \(79 \times 59\) mm</li>
-            </ul>
-
-            <button class="buy-btn" onclick="beliMotor('BMW K1200S')">
-                BELI SEKARANG
-            </button>
         </div>
 
-        <div class="card">
+        <div class="kotak1">
             <img src="img/BMW K1200S YELLOW SPECIAL.webp" alt="">
-            <h3>BMW k1200S YELLOW SPECIAL</h3>
-            <div class="price">
-                Starting from <span>Rp280.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW K1200S YELLOW SPECIAL</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 1.157 cc Inline-4 DOHC <br>
+                    Tenaga: 167 hp <br>
+                    Torsi: 130 Nm <br>
+                    Transmisi: Manual 6-percepatan <br>
+                    Penggerak: Shaft Drive <br>
+                    Akselerasi: 0–100 km/jam dalam 2,8 detik <br>
+                    Dudukan: 2 orang <br>
+                    Fitur unggulan: Edisi warna khusus Yellow Special, performa tinggi, desain eksklusif, touring dan
+                    sport dalam satu paket.
+                </p>
+                <div class="harga">Rp280.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMotor('BMW K1200S YELLOW SPECIAL')">BELI SEKARANG</a>
             </div>
-
-            <ul class="spec-list">
-                <li> Kapasitas: \(1.157\) cc</li>
-                <li>Konfigurasi: 4-silinder segaris, DOHC</li>
-                <li>Tenaga Maksimum: \(167\) tenaga kuda (\(123\) kW) pada \(10.250\) rpm</li>
-                <li>Torsi Maksimum: \(130\) Nm pada \(8.250\) rpm atau hingga \(13.3\) kg-m</li>
-                <li>Diameter x Langkah: \(79 \times 59\) mm</li>
-            </ul>
-
-            <button class="buy-btn" onclick="beliMotor('BMW K1200S YELLOW SPECIAL')">
-                BELI SEKARANG
-            </button>
         </div>
 
-        <div class="card">
+        <div class="kotak1">
             <img src="img/BMW R1100GS-ABS.webp" alt="">
-            <h3>BMW R1100GS-ABS</h3>
-            <div class="price">
-                Starting from <span>Rp295.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW R1100GS-ABS</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 1.085 cc Boxer Twin Cylinder <br>
+                    Tenaga: 80 hp <br>
+                    Torsi: 97 Nm <br>
+                    Transmisi: Manual 5-percepatan <br>
+                    Penggerak: Shaft Drive <br>
+                    Akselerasi: 0–100 km/jam dalam 4,8 detik <br>
+                    Dudukan: 2 orang <br>
+                    Fitur unggulan: Sistem ABS, suspensi Telelever, kemampuan off-road dan touring yang sangat baik,
+                    legenda keluarga GS.
+                </p>
+                <div class="harga">Rp295.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMotor('BMW R1100GS-ABS')">BELI SEKARANG</a>
             </div>
-
-            <ul class="spec-list">
-                <li>Mesin: 2-silinder, 4-stroke, Boxer</li>
-                <li>Kapasitas: \(1.085\) cc</li>
-                <li>Tenaga Maksimum: \(80\) hp (\(59\) kW) pada \(6.750\) rpm</li>
-                <li>Torsi Maksimum: \(97\) Nm pada \(5.250\) rpm</li>
-                <li>Transmisi: Manual 5-percepatan, penggerak gardan (shaft drive)</li>
-            </ul>
-
-            <button class="buy-btn" onclick="beliMotor('BMW R1100GS-ABS')">
-                BELI SEKARANG
-            </button>
         </div>
 
-        <div class="card">
+        <div class="kotak1">
             <img src="img/BMW R1100RT.webp" alt="">
-            <h3>BMW R1100RT</h3>
-            <div class="price">
-                Starting from <span>Rp300.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW R1100RT</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 1.085 cc Boxer Twin Cylinder <br>
+                    Tenaga: 90 hp <br>
+                    Torsi: 95 Nm <br>
+                    Transmisi: Manual 5-percepatan <br>
+                    Penggerak: Shaft Drive <br>
+                    Akselerasi: 0–100 km/jam dalam 4,6 detik <br>
+                    Dudukan: 2 orang <br>
+                    Fitur unggulan: Windshield elektrik, posisi berkendara nyaman, kapasitas bagasi besar, ideal untuk
+                    touring jarak jauh.
+                </p>
+                <div class="harga">Rp300.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMotor('BMW R1100RT')">BELI SEKARANG</a>
             </div>
-
-            <ul class="spec-list">
-                <li>Tipe Mesin: 4-stroke, Boxer (Twin silinder datar)</li>
-                <li>Kapasitas: 1085 cc</li>
-                <li>Pendingin: Udara dan Oli</li>
-                <li>Tenaga Maksimum: 90 hp pada putaran \(7.250\) rpm</li>
-                <li>Berat Basah (Wet Weight): sekitar \(243\) kg hingga \(270\) kg</li>
-            </ul>
-
-            <button class="buy-btn" onclick="beliMotor('BMW R1100RT')">
-                BELI SEKARANG
-            </button>
         </div>
 
-        <div class="card">
+        <div class="kotak1">
             <img src="img/BMW R1200GS.webp" alt="">
-            <h3>BMW R1200GS</h3>
-            <div class="price">
-                Starting from <span>Rp300.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW R1200GS</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 1.170 cc Boxer Twin Cylinder <br>
+                    Tenaga: 125 hp <br>
+                    Torsi: 125 Nm <br>
+                    Transmisi: Manual 6-percepatan <br>
+                    Penggerak: Shaft Drive <br>
+                    Akselerasi: 0–100 km/jam dalam 3,5 detik <br>
+                    Dudukan: 2 orang <br>
+                    Fitur unggulan: Adventure bike terlaris BMW, riding mode, ABS Pro, Dynamic ESA, nyaman di jalan raya
+                    maupun off-road.
+                </p>
+                <div class="harga">Rp300.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMotor('BMW R1200GS')">BELI SEKARANG</a>
             </div>
-
-            <ul class="spec-list">
-                <li>Tipe Mesin: 4-stroke, Boxer (Twin silinder datar)</li>
-                <li>Kapasitas: 1085 cc</li>
-                <li>Pendingin: Udara dan Oli</li>
-                <li>Tenaga Maksimum: 90 hp pada putaran \(7.250\) rpm</li>
-                <li>Berat Basah (Wet Weight): sekitar \(243\) kg hingga \(270\) kg</li>
-            </ul>
-
-            <button class="buy-btn" onclick="beliMotor('BMW R1100GS-ABS')">
-                BELI SEKARANG
-            </button>
         </div>
 
-
-        <div class="card">
+        <div class="kotak1">
             <img src="img/BMW R1200GS SPECIAL RED.webp" alt="">
-            <h3>BMW R1200GS SPECIAL RED</h3>
-            <div class="price">
-                Starting from <span>Rp600.000.000</span>
+            <div class="kotak-kecil">
+                <h3>BMW R1200GS SPECIAL RED</h3>
+                <p>
+                    SPESIFIKASI: <br>
+                    Mesin: 1.170 cc Boxer Twin Cylinder <br>
+                    Tenaga: 125 hp <br>
+                    Torsi: 125 Nm <br>
+                    Transmisi: Manual 6-percepatan <br>
+                    Penggerak: Shaft Drive <br>
+                    Akselerasi: 0–100 km/jam dalam 3,5 detik <br>
+                    Dudukan: 2 orang <br>
+                    Fitur unggulan: Warna eksklusif Special Red Edition, Dynamic ESA, ABS Pro, Touring Package, performa
+                    premium khas BMW Motorrad.
+                </p>
+                <div class="harga">Rp600.000.000</div>
+                <a href="contact.html" class="btn-beli" onclick="beliMotor('BMW R1200GS SPECIAL RED')">BELI SEKARANG</a>
             </div>
-
-            <ul class="spec-list">
-                <li>Mesin: 1.170cc, 2-silinder Boxer, berpendingin cairan/udara</li>
-                <li>Tenaga: 125 PS @ 7.750 rpm</li>
-                <li>Torsi: 125 Nm @ 6.500 rpm</li>
-                <li>Transmisi: 6-percepatan manual</li>
-                <li>Suspensi: Depan BMW Telelever, Belakang BMW Paralever</li>
-            </ul>
-
-            <button class="buy-btn" onclick="beliMotor('BMW R1200GS SPECIAL RED')">
-                BELI SEKARANG
-            </button>
         </div>
 
 
@@ -578,6 +640,12 @@
                 alert("Anda memilih " + mobil + ". Tim showroom akan segera menghubungi Anda.");
             }
         </script>
+
+        </div>
+
+        <footer>
+        © 2026 BMW Indonesia | The Ultimate Driving Experience
+    </footer>
 
 </body>
 
