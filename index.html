@@ -50,24 +50,177 @@
             color: gold
         }
 
-        .Judul {
-            height: 60vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            text-align: center
+        .hero-slider {
+
+            width: 100%;
+            height: 70vh;
+
+            position: relative;
+
+            overflow: hidden;
+
         }
 
-        .Judul h1 {
-            font-size: 60px;
+
+
+        .slide {
+
+            display: none;
+
+            width: 100%;
+            height: 100%;
+
+            position: absolute;
+
+        }
+
+
+
+        .slide img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+
+
+        .slide.active {
+
+            display: block;
+
+            animation: fade 1s;
+
+        }
+
+
+
+        .caption {
+
+            position: absolute;
+
+            top: 50%;
+            left: 10%;
+
+            transform: translateY(-50%);
+
+            color: white;
+
+        }
+
+
+
+        .caption h1 {
+
+            font-size: 65px;
+
+            text-shadow: 0 5px 15px black;
+
+        }
+
+
+
+        .caption p {
+
+            font-size: 25px;
+
+        }
+
+
+
+        .caption a {
+
+
+            display: inline-block;
+
+            margin-top: 20px;
+
+            padding: 15px 35px;
+
             background: #0166B1;
-            padding: 20px 40px;
-            border-radius: 10px
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
         }
 
-        .Judul h1:hover {
-            color: gold
+
+
+        .caption a:hover {
+
+            background: red;
+
+        }
+
+
+
+        .prev,
+        .next {
+
+            position: absolute;
+
+            top: 50%;
+
+
+            transform: translateY(-50%);
+
+
+            background: black;
+
+            color: white;
+
+
+            border: none;
+
+            padding: 20px;
+
+            font-size: 25px;
+
+            border-radius: 50%;
+
+
+            cursor: pointer;
+
+        }
+
+
+
+        .prev {
+
+            left: 30px;
+
+        }
+
+
+        .next {
+
+            right: 30px;
+
+        }
+
+
+
+        @keyframes fade {
+
+            from {
+
+                opacity: 0;
+
+            }
+
+            to {
+
+                opacity: 1;
+
+            }
+
         }
 
         .populer {
@@ -271,11 +424,45 @@
         </nav>
     </header>
 
-    <section class="Judul">
-        <h1>Three Best Showroom</h1>
-    </section>
+    <section class="hero-slider">
 
-    <h2 class="populer">Most Popular Cars</h2>
+
+        <div class="slide active">
+            <img src="img/slide1.jpeg">
+            <div class="caption">
+                <h1>Three Best Showroom</h1>
+                <p>Experience The Ultimate Driving Machine</p>
+                <a href="gallery.html">Explore BMW</a>
+            </div>
+        </div>
+
+
+        <div class="slide">
+            <img src="img/banner2.jpg">
+            <div class="caption">
+                <h1>BMW M Series</h1>
+                <p>Performance Without Limits</p>
+                <a href="gallery.html">View Collection</a>
+            </div>
+        </div>
+
+
+        <div class="slide">
+            <img src="img/slide3.jpeg">
+            <div class="caption">
+                <h1>Luxury Electric BMW</h1>
+                <p>Future Mobility Experience</p>
+                <a href="gallery.html">Shop Now</a>
+            </div>
+        </div>
+
+
+        <button class="prev" onclick="ubahSlide(-1)">❮</button>
+
+        <button class="next" onclick="ubahSlide(1)">❯</button>
+
+
+    </section>
 
     <section class="promo-section">
 
@@ -292,6 +479,8 @@
         </div>
 
     </section>
+
+    <h2 class="populer">Most Popular Cars</h2>
 
     <div class="kotak">
 
@@ -394,8 +583,27 @@
             alert("Terima kasih telah memilih " + namaMobil + ". Tim sales kami akan segera menghubungi Anda.");
         }
 
+        let indexSlide = 0;
+
+        function ubahSlide(n) {
+            let slide = document.querySelectorAll(".slide");
+            slide[indexSlide].classList.remove("active");
+            indexSlide += n;
+            if (indexSlide >= slide.length) {
+                indexSlide = 0;
+            }
+
+            if (indexSlide < 0) {
+                indexSlide = slide.length - 1;
+            }
+
+            slide[indexSlide].classList.add("active");
+        }
+
+        setInterval(() => {
+            ubahSlide(1);
+        }, 5000);
+
     </script>
-
 </body>
-
 </html>
