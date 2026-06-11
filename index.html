@@ -51,176 +51,100 @@
         }
 
         .hero-slider {
-
             width: 100%;
             height: 70vh;
-
             position: relative;
-
             overflow: hidden;
-
         }
 
 
 
         .slide {
-
             display: none;
-
             width: 100%;
             height: 100%;
-
             position: absolute;
-
         }
 
 
 
         .slide img {
-
             width: 100%;
             height: 100%;
-
             object-fit: cover;
-
         }
 
 
 
         .slide.active {
-
             display: block;
-
             animation: fade 1s;
-
         }
-
-
 
         .caption {
-
             position: absolute;
-
             top: 50%;
             left: 10%;
-
             transform: translateY(-50%);
-
             color: white;
-
         }
-
-
 
         .caption h1 {
-
             font-size: 65px;
-
             text-shadow: 0 5px 15px black;
-
         }
-
-
 
         .caption p {
-
             font-size: 25px;
-
         }
 
-
-
         .caption a {
-
-
             display: inline-block;
-
             margin-top: 20px;
-
             padding: 15px 35px;
-
             background: #0166B1;
-
             color: white;
-
             text-decoration: none;
-
             border-radius: 30px;
-
             font-weight: bold;
-
         }
 
 
 
         .caption a:hover {
-
             background: red;
-
         }
-
-
 
         .prev,
         .next {
-
             position: absolute;
-
             top: 50%;
-
-
             transform: translateY(-50%);
-
-
             background: black;
-
             color: white;
-
-
             border: none;
-
             padding: 20px;
-
             font-size: 25px;
-
             border-radius: 50%;
-
-
             cursor: pointer;
-
         }
-
-
 
         .prev {
-
             left: 30px;
-
         }
-
 
         .next {
-
             right: 30px;
-
         }
 
-
-
         @keyframes fade {
-
             from {
-
                 opacity: 0;
-
             }
 
             to {
-
                 opacity: 1;
-
             }
-
         }
 
         .populer {
@@ -261,47 +185,69 @@
             width: 85%;
             margin: auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
-            margin-bottom: 80px
+            margin-bottom: 80px;
         }
 
         .kotak1 {
-            background: #0166B1;
+            position: relative;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgb(0 0 0 / .1);
-            transition: 0.4s
-        }
-
-        .kotak1:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 25px rgb(0 0 0 / .2)
         }
 
         .kotak1 img {
             width: 100%;
-            height: 220px;
+            height: 250px;
             object-fit: cover;
-            transition: 0.4s
+            transition: 0.4s;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: #fff;
+            padding: 20px;
+            opacity: 0;
+            transition: 0.4s;
+        }
+
+        .kotak1:hover .overlay {
+            opacity: 1;
         }
 
         .kotak1:hover img {
-            transform: scale(1.1)
+            transform: scale(1.1);
         }
 
-        .kotak-kecil {
-            padding: 20px
+        .overlay h3 {
+            margin: 0;
+            font-size: 20px;
         }
 
-        .kotak-kecil h3 {
-            margin-bottom: 10px;
-            color: #fff
-        }
-
-        .kotak-kecil p {
+        .overlay a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            border: 1px solid gold;
+            color: gold;
+            text-decoration: none;
+            border-radius: 5px;
             font-size: 14px;
-            color: #fff
+            transition: 0.3s;
+        }
+
+        .overlay a:hover {
+            background: gold;
+            color: #000;
+        }
+
+        .kotak1:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
         }
 
         footer {
@@ -382,28 +328,79 @@
             }
         }
 
-        .harga {
-            color: gold;
-            font-size: 22px;
-            font-weight: 700;
-            margin: 15px 0
+
+
+        .spec {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #eee;
+            line-height: 1.6;
         }
 
+        .spec p {
+            margin: 4px 0;
+        }
+
+        .price {
+            color: gold;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        /* update tombol biar lebih premium */
         .btn-beli {
             display: inline-block;
             margin-top: 10px;
-            padding: 12px 25px;
-            background: gold;
-            color: #000;
+            padding: 10px 20px;
+            background: transparent;
+            color: gold;
+            border: 2px solid gold;
             text-decoration: none;
             border-radius: 8px;
             font-weight: 700;
-            transition: 0.3s
+            transition: 0.3s;
         }
 
         .btn-beli:hover {
-            background: #fff;
-            transform: scale(1.05)
+            background: gold;
+            color: #000;
+            transform: scale(1.05);
+        }
+
+        .quote-section {
+            width: 100%;
+            padding: 100px 20px;
+            background: #eef1f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .quote-box {
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .quote-icon {
+            font-size: 80px;
+            color: #cfd6df;
+            margin-bottom: 20px;
+        }
+
+        .quote-text {
+            font-size: 30px;
+            font-style: italic;
+            color: #1a1a1a;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .quote-author {
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #0166B1;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -473,76 +470,50 @@
 
     </section>
 
-    <h2 class="populer">Most Popular Cars</h2>
+    <h2 class="populer">Our Exclusive Collection</h2>
 
     <div class="kotak">
 
         <div class="kotak1">
             <img src="img/G82.jpeg">
-            <div class="kotak-kecil">
-                <h3>BMW M4 Competition (G82)</h3>
-                <p> SPESIFIKASI: <br>
-                    Mesin: 3.0L 6-silinder segaris TwinPower Turbo <br>
-                    Tenaga: 510 hp <br>
-                    Torsi: 650 Nm <br>
-                    Transmisi: 8-speed M Steptronic otomatis <br>
-                    Penggerak: Rear-wheel drive / M xDrive (AWD) <br>
-                    Akselerasi: 0–100 km/jam dalam 3,8 detik <br>
-                    Dudukan: 4 kursi, 2 pintu <br>
-                    Fitur unggulan: Kidney grille khas, BMW M tuning, curved display 12.3"+14.9",
-                    driving modes customizable, lightweight carbon roof.
-                </p>
-                <div class="harga">Rp 2.860.000.000</div>
-                <a href="#" class="btn-beli" onclick="beliMobil('BMW M4 Competition (G82)')">
-                    Beli Sekarang
-                </a>
+            <div class="overlay">
+                <h3>BMW M4 Competition</h3>
+                <a href="gallery.html">Info Selengkapnya →</a>
             </div>
         </div>
 
         <div class="kotak1">
             <img src="img/G30.jpeg">
-            <div class="kotak-kecil">
+            <div class="overlay">
                 <h3>BMW 530i M Sport (G30 LCI)</h3>
-                <p> SPESIFIKASI: <br>
-                    Mesin: 2.0L 4-silinder TwinPower Turbo <br>
-                    Tenaga: 252 hp <br>
-                    Torsi: 350 Nm <br>
-                    Transmisi: 8-speed Steptronic otomatis <br>
-                    Penggerak: Rear-wheel drive <br>
-                    Akselerasi: 0–100 km/jam dalam 6,2 detik <br>
-                    Dudukan: 5 kursi, 4 pintu <br>
-                    Fitur unggulan: Kidney grille krom + M bodykit,
-                    BMW Live Cockpit Professional, Harman Kardon sound system, Driving Assistant Professional.
-                </p>
-                <div class="harga">Rp 1.850.000.000</div>
-                <a href="#" class="btn-beli" onclick="beliMobil('BMW 530i M Sport (G30 LCI)')">
-                    Beli Sekarang
-                </a>
+                <a href="gallery.html">Info Selengkapnya →</a>
             </div>
         </div>
 
+
         <div class="kotak1">
             <img src="img/gran coupe.jpg">
-            <div class="kotak-kecil">
+            <div class="overlay">
                 <h3>BMW i4 eDrive40 (Gran Coupe Listrik)</h3>
-                <p> SPESIFIKASI: <br>
-                    Motor: 1 unit motor listrik di belakang <br>
-                    Tenaga: 340 hp <br>
-                    Torsi: 430 Nm <br>
-                    Baterai: 81,5 kWh lithium-ion <br>
-                    Jarak tempuh: Hingga 590 km (WLTP) <br>
-                    Akselerasi: 0–100 km/jam dalam 5,7 detik <br>
-                    Dudukan: 5 kursi, 4 pintu (Gran Coupe) <br>
-                    Fitur unggulan: BMW Operating System 8,
-                    kidney grille tertutup khas BMW i, silent driving, fast charging 10–80% dalam 31 menit. <br>
-                </p>
-                <div class="harga">Rp 1.950.000.000</div>
-                <a href="#" class="btn-beli" onclick="beliMobil('BMW i4 eDrive40 (Gran Coupe Listrik)')">
-                    Beli Sekarang
-                </a>
+                <a href="gallery.html">Info Selengkapnya →</a>
             </div>
         </div>
     </div>
+
+    <section class="quote-section">
+        <div class="quote-box">
+            <div class="quote-icon">“</div>
+
+            <p class="quote-text">
+                Bagi kami, menjual mobil hanyalah awal dari sebuah hubungan jangka panjang
+                untuk menjaga keamanan perjalanan Anda.
+            </p>
+
+            <div class="quote-author">
+                — CEO THREE BEST SHOWROOM
+            </div>
+        </div>
+    </section>
 
     <footer>
         © 2026 BMW Indonesia | The Ultimate Driving Experience
@@ -599,4 +570,5 @@
 
     </script>
 </body>
+
 </html>

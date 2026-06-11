@@ -51,6 +51,22 @@
             color: gold
         }
 
+        .judul {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .judul h1 {
+            font-size: 36px;
+            letter-spacing: 3px;
+            color: #0166B1;
+        }
+
+        .judul p {
+            color: #555;
+            margin-top: 10px;
+        }
+
         .kotak {
             width: 85%;
             margin: auto;
@@ -129,6 +145,105 @@
             padding: 20px
         }
 
+        .label {
+            position: absolute;
+            background: gold;
+            color: #000;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 0 0 10px 0;
+        }
+
+        .kotak1 {
+            position: relative;
+        }
+
+        .kotak1 {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: muncul 0.8s forwards;
+        }
+
+        .kotak1:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .kotak1:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .kotak1:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        @keyframes muncul {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .harga {
+            color: gold;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 15px 0;
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        }
+
+        .kotak1:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-beli {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-beli::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 100%;
+            background: #fff;
+            left: 0;
+            top: 0;
+            transition: 0.3s;
+            z-index: 0;
+        }
+
+        .btn-beli:hover::after {
+            width: 100%;
+        }
+
+        .btn-beli span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .info {
+            width: 85%;
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-around;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+        }
+
+        .info div {
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .info div:hover {
+            transform: translateY(-5px);
+            color: #0166B1;
+        }
     </style>
 </head>
 
@@ -149,9 +264,23 @@
         </nav>
     </header>
 
+    <div class="judul">
+        <h1>OUR COLLECTION</h1>
+        <p>Pilih kendaraan impian terbaik Anda dengan performa dan gaya premium</p>
+    </div>
+
+    </header>
+
+    <div class="info">
+        <div>🚗 Mobil Baru & Klasik</div>
+        <div>🔧 Booking Service Mudah</div>
+        <div>💰 Harga Terbaik</div>
+    </div>
+
     <div class="kotak">
 
         <div class="kotak1">
+            <div class="label">BEST SELLER</div>
             <img src="img/G82.jpeg">
             <div class="kotak-kecil">
                 <h3>BMW M4 Competition (G82)</h3>
@@ -529,7 +658,8 @@
                     sport dalam satu paket.
                 </p>
                 <div class="harga">Rp280.000.000</div>
-                <a href="contact.html" class="btn-beli" onclick="beliMotor('BMW K1200S YELLOW SPECIAL')">BELI SEKARANG</a>
+                <a href="contact.html" class="btn-beli" onclick="beliMotor('BMW K1200S YELLOW SPECIAL')">BELI
+                    SEKARANG</a>
             </div>
         </div>
 
@@ -617,6 +747,55 @@
             </div>
         </div>
 
+        <div class="kotak1">
+    <img src="img/BMW Motorrad Vision Next 100.webp" alt="BMW Motorrad Vision Next 100">
+    <div class="kotak-kecil">
+        <h3>BMW MOTORRAD VISION NEXT 100</h3>
+        <p>
+            SPESIFIKASI: <br>
+            Tipe: Concept Electric Motorcycle <br>
+            Tenaga: Tidak diumumkan (konsep) <br>
+            Penggerak: Motor listrik futuristik <br>
+            Rangka: Flexframe Self-Balancing <br>
+            Teknologi: Autonomous Stability Assist <br>
+            Lampu: Full LED Adaptive Lighting <br>
+            Panel Instrumen: Augmented Reality Visor <br>
+            Dudukan: 2 orang <br>
+            Fitur unggulan: Sistem self-balancing, desain tanpa helm konvensional,
+            teknologi AI, dan konsep mobilitas BMW masa depan.
+        </p>
+        <div class="harga">Rp15.000.000.000</div>
+        <a href="contact.html" class="btn-beli" onclick="beliMotor('BMW Motorrad Vision Next 100')">
+            BELI SEKARANG
+        </a>
+    </div>
+</div>
+
+<div class="kotak1">
+    <img src="img/BMW R57 1928.webp" alt="BMW R57 1928">
+    <div class="kotak-kecil">
+        <h3>BMW R57 (1928)</h3>
+        <p>
+            SPESIFIKASI: <br>
+            Mesin: 494cc Boxer Twin 2-Silinder <br>
+            Tenaga: 18 hp @ 4.000 rpm <br>
+            Torsi: 32 Nm <br>
+            Transmisi: Manual 3-percepatan <br>
+            Penggerak: Shaft Drive <br>
+            Kecepatan Maksimum: 120 km/jam <br>
+            Suspensi Depan: Leading Link Fork <br>
+            Berat: ±165 kg <br>
+            Dudukan: 2 orang <br>
+            Fitur unggulan: Salah satu motor sport BMW tercepat pada masanya,
+            mesin boxer legendaris, dan menjadi koleksi klasik yang sangat langka.
+        </p>
+        <div class="harga">Rp3.500.000.000</div>
+        <a href="contact.html" class="btn-beli" onclick="beliMotor('BMW R57 1928')">
+            BELI SEKARANG
+        </a>
+    </div>
+</div>
+
 
         <script>
             function beliMobil(mobil) {
@@ -624,9 +803,9 @@
             }
         </script>
 
-        </div>
+    </div>
 
-        <footer>
+    <footer>
         © 2026 BMW Indonesia | The Ultimate Driving Experience
     </footer>
 
