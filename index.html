@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Home</title>
     <style>
         body {
@@ -28,51 +29,42 @@
             margin-left: 20px;
             text-decoration: none;
             font-weight: 700;
-            gap: 10px;
+            gap: 10px
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 15px
         }
 
         h2 {
-            letter-spacing: 2px;
+            letter-spacing: 2px
         }
 
         nav a {
             cursor: pointer;
-            transition: 0.3s;
+            transition: 0.3s
         }
 
         nav a:hover {
-            color: gold;
-        }
-
-        .hero-slider {
-            width: 100%;
-            height: 70vh;
-            position: relative;
-            overflow: hidden;
+            color: gold
         }
 
         .slide {
-            display: none;
-            width: 100%;
-            height: 100%;
-            position: absolute;
+            height: 70vh;
+            overflow: hidden
         }
 
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .carousel-item {
+            position: relative;
+            height: 70vh
         }
 
-        .slide.active {
-            display: block;
-            animation: fade 1sl;
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
         }
 
         .caption {
@@ -395,6 +387,7 @@
 </head>
 
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <header>
         <div class="logo">
             <img src="img/logo.png" alt="Gambar Logo" width="80px">
@@ -410,37 +403,39 @@
         </nav>
     </header>
 
-    <section class="hero-slider">
+    <section class="slide">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
 
-        <div class="slide active">
-            <img src="img/slide1.jpeg">
-            <div class="caption">
-                <h1>Three Best Showroom</h1>
-                <p>Experience The Ultimate Driving Machine</p>
-                <a href="gallery.html">Explore BMW</a>
+                <div class="carousel-item active">
+                    <img src="img/slide1.jpeg" class="d-block w-100" alt="slide1">
+                    <div class="caption">
+                        <h1>Three Best Showroom</h1>
+                        <p>Experience The Ultimate Driving Machine</p>
+                        <a href="gallery.html">Explore BMW</a>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/slide2.jpg" class="d-block w-100" alt="slide2">
+                    <div class="caption">
+                        <h1>Three Best Showroom</h1>
+                        <p>Performance Without Limits</p>
+                        <a href="gallery.html">Explore BMW</a>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/slide3.jpeg" class="d-block w-100" alt="slide3">
+                    <div class="caption">
+                        <h1>Three Best Showroom</h1>
+                        <p>Future Mobility Experience</p>
+                        <a href="gallery.html">Explore BMW</a>
+                    </div>
+                </div>
+
             </div>
         </div>
-
-        <div class="slide">
-            <img src="img/slide2.jpg">
-            <div class="caption">
-                <h1>BMW M Series</h1>
-                <p>Performance Without Limits</p>
-                <a href="gallery.html">View Collection</a>
-            </div>
-        </div>
-
-        <div class="slide">
-            <img src="img/slide3.jpeg">
-            <div class="caption">
-                <h1>Luxury Electric BMW</h1>
-                <p>Future Mobility Experience</p>
-                <a href="gallery.html">Shop Now</a>
-            </div>
-        </div>
-
-        <button class="prev" onclick="ubahSlide(-1)">❮</button>
-        <button class="next" onclick="ubahSlide(1)">❯</button>
     </section>
 
     <section class="promo-section">
@@ -535,27 +530,11 @@
 
     <script>
 
-        function claimPromo() {
-            alert("🎉 Selamat! Promo berhasil diklaim!");
-        }
-
-
-        let time = 3600;
-
-        setInterval(() => {
-
-            let hours = Math.floor(time / 3600);
-            let minutes = Math.floor((time % 3600) / 60);
-            let seconds = time % 60;
-
-            document.getElementById("timer").innerHTML =
-                `${hours} : ${minutes} : ${seconds}`;
-
-            if (time > 0) {
-                time--;
-            }
-
-        }, 1000);
+        function claimPromo() { alert("🎉 Selamat! Promo berhasil diklaim!") }
+        let time = 3600; setInterval(() => { let hours = Math.floor(time / 3600); 
+        let minutes = Math.floor((time % 3600) / 60); 
+        let seconds = time % 60; 
+        document.getElementById("timer").innerHTML = `${hours} : ${minutes} : ${seconds}`; if (time > 0) { time-- } }, 1000)
 
     </script>
 </body>
